@@ -12,10 +12,10 @@ import com.example.atmos.WeatherRepository.WeatherRepository;
 
 import java.util.List;
 
-public class WeatherViewModelSomething extends ViewModel {
+public class WeatherViewModel extends ViewModel {
     private WeatherRepository repositorySomething;
 
-    public WeatherViewModelSomething(){
+    public WeatherViewModel(){
         repositorySomething = WeatherRepository.getInstance();
     }
 

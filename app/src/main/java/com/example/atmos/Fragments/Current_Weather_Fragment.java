@@ -25,7 +25,7 @@ import com.example.atmos.ModelClasses.LocationModel;
 import com.example.atmos.R;
 import com.example.atmos.Response.CurrentWeather;
 import com.example.atmos.Utils.DateConversion;
-import com.example.atmos.WeatherViewModels.WeatherViewModelSomething;
+import com.example.atmos.WeatherViewModels.WeatherViewModel;
 
 
 public class Current_Weather_Fragment extends Fragment {
@@ -33,7 +33,7 @@ public class Current_Weather_Fragment extends Fragment {
     private FragmentActivity fragmentActivity;
     private final int REQUEST_CODE = 101;
     //private LocationViewModel locationViewModel;
-    private WeatherViewModelSomething viewModel;
+    private WeatherViewModel viewModel;
 
     //declaring layout views
     private TextView date_tv, temp_tv, feels_like_temp_tv, weather_status_tv, location_tv;
@@ -54,7 +54,7 @@ public class Current_Weather_Fragment extends Fragment {
         // Inflate the layout for this fragment
 
         //locationViewModel = new ViewModelProvider(getActivity()).get(LocationViewModel.class);
-        viewModel = new ViewModelProvider(getActivity()).get(WeatherViewModelSomething.class);
+        viewModel = new ViewModelProvider(getActivity()).get(WeatherViewModel.class);
         View v = inflater.inflate(R.layout.fragment_current__weather_, container, false);
         date_tv = v.findViewById(R.id.id_date_tv);
         temp_tv = v.findViewById(R.id.id_current_temp);

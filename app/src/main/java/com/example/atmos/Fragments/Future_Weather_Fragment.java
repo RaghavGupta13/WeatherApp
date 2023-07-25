@@ -15,7 +15,7 @@ import android.view.ViewGroup;
 import com.example.atmos.Adapters.CustomAdapter;
 import com.example.atmos.R;
 import com.example.atmos.Response.FutureWeather2;
-import com.example.atmos.WeatherViewModels.WeatherViewModelSomething;
+import com.example.atmos.WeatherViewModels.WeatherViewModel;
 
 import java.util.List;
 
@@ -23,7 +23,7 @@ public class Future_Weather_Fragment extends Fragment {
 
     private RecyclerView recyclerView;
     private CustomAdapter adapter;
-    private WeatherViewModelSomething viewModel;
+    private WeatherViewModel viewModel;
 
     public Future_Weather_Fragment() {
         // Required empty public constructor
@@ -39,7 +39,7 @@ public class Future_Weather_Fragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        viewModel = new ViewModelProvider(getActivity()).get(WeatherViewModelSomething.class);
+        viewModel = new ViewModelProvider(getActivity()).get(WeatherViewModel.class);
         View v =  inflater.inflate(R.layout.fragment_future__weather_, container, false);
         recyclerView = v.findViewById(R.id.id_future_recycler_view);
 

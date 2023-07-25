@@ -8,11 +8,11 @@ import androidx.lifecycle.ViewModel;
 import com.example.atmos.ModelClasses.LocationModel;
 import com.example.atmos.Utils.LocationLiveData;
 
-public class LocationViewModelSomething extends ViewModel {
+public class LocationViewModel extends ViewModel {
 
     private LocationLiveData locationLiveDataSomething;
 
-    public LocationViewModelSomething() {
+    public LocationViewModel() {
         locationLiveDataSomething = LocationLiveData.getINSTANCE();
     }
 
