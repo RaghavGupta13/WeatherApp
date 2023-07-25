@@ -3,7 +3,6 @@ package com.example.atmos.Fragments;
 import static android.content.ContentValues.TAG;
 
 import android.Manifest;
-import android.content.Context;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 
@@ -17,22 +16,16 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.bumptech.glide.Glide;
-import com.example.atmos.MainActivity;
 import com.example.atmos.ModelClasses.LocationModel;
 import com.example.atmos.R;
 import com.example.atmos.Response.CurrentWeather;
 import com.example.atmos.Utils.DateConversion;
-import com.example.atmos.WeatherViewModels.LocationViewModel;
-import com.example.atmos.WeatherViewModels.WeatherViewModel;
+import com.example.atmos.WeatherViewModels.WeatherViewModelSomething;
 
 
 public class Current_Weather_Fragment extends Fragment {
@@ -40,7 +33,7 @@ public class Current_Weather_Fragment extends Fragment {
     private FragmentActivity fragmentActivity;
     private final int REQUEST_CODE = 101;
     //private LocationViewModel locationViewModel;
-    private WeatherViewModel viewModel;
+    private WeatherViewModelSomething viewModel;
 
     //declaring layout views
     private TextView date_tv, temp_tv, feels_like_temp_tv, weather_status_tv, location_tv;
@@ -61,7 +54,7 @@ public class Current_Weather_Fragment extends Fragment {
         // Inflate the layout for this fragment
 
         //locationViewModel = new ViewModelProvider(getActivity()).get(LocationViewModel.class);
-        viewModel = new ViewModelProvider(getActivity()).get(WeatherViewModel.class);
+        viewModel = new ViewModelProvider(getActivity()).get(WeatherViewModelSomething.class);
         View v = inflater.inflate(R.layout.fragment_current__weather_, container, false);
         date_tv = v.findViewById(R.id.id_date_tv);
         temp_tv = v.findViewById(R.id.id_current_temp);

@@ -7,32 +7,31 @@ import androidx.lifecycle.ViewModel;
 
 import com.example.atmos.ModelClasses.LocationModel;
 import com.example.atmos.Response.CurrentWeather;
-import com.example.atmos.Response.FutureWeather;
 import com.example.atmos.Response.FutureWeather2;
 import com.example.atmos.WeatherRepository.WeatherRepository;
 
 import java.util.List;
 
-public class WeatherViewModel extends ViewModel {
-    private WeatherRepository repository;
+public class WeatherViewModelSomething extends ViewModel {
+    private WeatherRepository repositorySomething;
 
-    public WeatherViewModel(){
-        repository = WeatherRepository.getInstance();
+    public WeatherViewModelSomething(){
+        repositorySomething = WeatherRepository.getInstance();
     }
 
     public MutableLiveData<CurrentWeather> getCurrentWeather(){
-        return repository.getCurrentWeather();
+        return repositorySomething.getCurrentWeather();
     }
 
     public MutableLiveData<LocationModel> getLocation(){
-        return repository.getLocation();
+        return repositorySomething.getLocation();
     }
 
     public MutableLiveData<List<FutureWeather2>> getFutureWeather(){
-        return repository.getFutureWeather();
+        return repositorySomething.getFutureWeather();
     }
 
     public void requestCurrentWeather(Context context){
-        repository.requestCurrentWeather(context);
+        repositorySomething.requestCurrentWeather(context);
     }
 }

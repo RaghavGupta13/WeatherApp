@@ -3,27 +3,18 @@ package com.example.atmos;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
-import androidx.core.app.ActivityCompat;
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProvider;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import androidx.viewpager2.widget.ViewPager2;
 
-import android.Manifest;
-import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.widget.Toast;
 
 import com.example.atmos.Adapters.PagerAdapter;
 import com.example.atmos.Fragments.Current_Weather_Fragment;
 import com.example.atmos.Fragments.Future_Weather_Fragment;
 import com.example.atmos.ModelClasses.LocationModel;
-import com.example.atmos.Response.CurrentWeather;
-import com.example.atmos.WeatherViewModels.LocationViewModel;
-import com.example.atmos.WeatherViewModels.WeatherViewModel;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
