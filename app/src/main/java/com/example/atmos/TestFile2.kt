@@ -4,5 +4,4 @@ class TestFile2 {
     //This is A
 
     //This is B
-    //This is C
 }
